@@ -26,6 +26,7 @@ const calcular = () => {
     const personal = (esfuerzo / tiempo).toFixed(2);
     const productividad = (ldc / esfuerzo).toFixed(2);
     const costo = (esfuerzo * ch).toFixed(2);
+    const cost = (costo / ldc).toFixed(2);
 
     solucion.innerHTML = `
         <div class="shSSSadow">
@@ -59,6 +60,11 @@ const calcular = () => {
             <h2 class="text-white fw-lighter text-start">Estimación de costo</h2>
             <p> C = <span >${esfuerzo}</span> * <span>${ch}</span> </p>
             <p>COSTO: <u class="text-white">${costo}</u></p>
+        </div>
+        <div class="shadow">
+            <h2 class="text-white fw-lighter text-start">Costo lineas codigo</h2>
+            <p> C = <span >${costo}</span> / <span>${ldc}</span> </p>
+            <p>COSTO: <u class="text-white">${cost}</u></p>
         </div>
         `;
   }
